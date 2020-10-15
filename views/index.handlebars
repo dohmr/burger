@@ -1,0 +1,11 @@
+<ul>
+  {{#each movies}}
+  <li>
+    <p>
+      {{this.id}}. {{this.movie}}
+
+      <button id="{{this.id}}" class="delfilm">Delete Movie!</button>
+    </p>
+  </li>
+  {{/each}}
+</ul>
