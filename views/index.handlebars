@@ -1,11 +1,28 @@
-<ul>
-  {{#each movies}}
-  <li>
-    <p>
-      {{this.id}}. {{this.movie}}
 
-      <button id="{{this.id}}" class="delfilm">Delete Movie!</button>
-    </p>
-  </li>
+
+<ul>
+  {{#each burgers}}
+    {{#unless whole}}
+      {{> burgers/cat-block devoured=false}}
+    {{/unless}}
   {{/each}}
 </ul>
+
+
+<h2>Make a Burger!</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <input type="text" id="ca" name="name"><br>
+    <label for="ca">Name a Burger:</label>
+    
+  </div>
+
+  <div class="form-group">
+    <label for="sleepy">Sleepy?</label><br>
+    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
+    <input type="radio" name="sleepy" value="0"> Awake
+  </div>
+
+  <button type="submit">Add Cat</button>
+</form>
