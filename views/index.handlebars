@@ -1,10 +1,10 @@
-
+<h1>EAT DA BURGER</h1>
 
 <ul>
   {{#each burgers}}
-    {{#unless whole}}
-      {{> burgers/burger-block devoured=false}}
-    {{/unless}}
+    {{!-- {{#unless whole}} --}}
+      {{this.id}}. {{this.burger_name}}<br>
+    {{!-- {{/unless}} --}}
   {{/each}}
 </ul>
 
