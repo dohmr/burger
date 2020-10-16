@@ -19,11 +19,16 @@ router.get("/", (req, res) => {
         res.render("index", getObject);
     });
 });
+
 // add a new burger and POST it into our DB
+// do we need a reload of the page?
+
 
 // update our burger, PUT its 'status' to devoured by :id
 
+
 // module.exports = routes;
+
 
 module.exports = router;
 // took FOREVER TO FIND THIS TYPO DEBUG!!!!
