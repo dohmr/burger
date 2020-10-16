@@ -32,7 +32,7 @@ const orm = {
             }
             cb(burgers); 
         });
-    };
+    },
 
 };
     
