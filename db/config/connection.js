@@ -16,4 +16,9 @@ connection.connect((err) => {
   console.log(`connected as id ${connection.threadId}`);
 });
 
+app.listen(PORT, () => {
+    // Log (server-side) when our server has started
+    console.log(`Server listening on: http://localhost:${PORT}`);
+});
+
 module.exports = connection;
