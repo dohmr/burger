@@ -4,11 +4,13 @@ const burgers = {
 
     all: (cb) => {
         orm.selectAll("burgers", (res) => {
+            
             cb(res);
         });
     },
 
     create: (newBurger, cb) => {
+        // console.log(cb);
         orm.insertOne("burgers", newBurger, (res) => {
             cb(res);
         });
@@ -18,7 +20,7 @@ const burgers = {
         orm.updateBurger("burgers", eatBurger, criteria, (res) => {
             cb(res);
         });
-    };
+    }
 
 };
 
