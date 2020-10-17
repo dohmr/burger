@@ -3,7 +3,7 @@
 <ul>
   {{#each burgers}}
     {{!-- {{#unless whole}} --}}
-      {{this.id}}. {{this.burger_name}}<br>
+      {{this.id}}. {{this.burger_name}}<button type="submit">Devoure !</button><br>
     {{!-- {{/unless}} --}}
   {{/each}}
 </ul>
@@ -13,13 +13,13 @@
 <form class="create-form">
 
   <div class="form-group">
-    <input type="text" id="ca" name="name"><br>
-    <label for="ca">Name a Burger:</label>
+    <input type="text" id="burg" name="name"><br>
+    <label for="burg">Name a Burger:</label>
     
   </div>
 
   <div class="form-group">
-    <label for="sleepy">Hungry?</label><br>
+    <label for="devoured">Hungry?</label><br>
   </div>
 
   <button type="submit">Add Dat Thang</button>
