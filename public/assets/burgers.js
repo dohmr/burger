@@ -1,5 +1,7 @@
+// alert("HELLLLO");
+
 $(() => {
-    $(".change-value").on("click", function () {
+    $("#change-value").on("click", function () {
         const id = $(this).data("id");
         const newBurgerVal = $(this).data("newvalue");
 
@@ -25,7 +27,7 @@ $(() => {
             burger_name: $("#burg").val().trim(),
             devoured: $("[name=devoured]:checked").val().trim(),
         };
-        // console.log(newBurger);
+        console.log(newBurger);
 
         // Send the POST request.
         $.ajax("/burger/eat", {
@@ -33,6 +35,8 @@ $(() => {
             data: newBurger,
         }).then(() => {
             location.reload();
+            console.log("Hi");
+
         });
     });
 

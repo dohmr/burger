@@ -35,19 +35,21 @@
       <h2>Grill IT!</h2>
       <form class="create-form">
 
-        <div class="form-group" method="POST">
+        <div class="form-group">
           <label for="burg">Name a Burger:</label><br>
           <input type="text" id="burg" name="name">
 
         </div>
-    </div>
-    <div class="col-2">
-      <div class="form-group" method="POST">
-        <label for="devoured">Hungry??</label><br>
-        <input type="radio" name="devoured" value="1" checked> Devour It!<br>
-        <input type="radio" name="devoured" value="0"> Save for Later!
-      </div>
-      <button type="submit" class="btn btn-danger">FIRE Burger!<i class="fas fa-fire"></i></button>
+
+
+        {{!-- <div class="col-2"> --}}
+
+        <div class="form-group">
+          <label for="devoured">Hungry??</label><br>
+          <input type="radio" name="devoured" value="1" checked> Devour It!<br>
+          <input type="radio" name="devoured" value="0"> Save for Later!
+        </div>
+        <button type="submit" class="btn btn-danger">FIRE Burger!<i class="fas fa-fire"></i></button>
       </form>
     </div>
   </div>

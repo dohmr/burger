@@ -20,11 +20,10 @@ router.get("/", (req, res) => {
 // add a new burger and POST it into our DB
 // do we need a reload of the page?
 router.post("/burger/eat", (req, res) => {
-  console.log(req.body.name),
-  console.log(req.body.devoured),
-    burgers.create({ burger_name: req.body.name, devoured: req.body.value }, (result) => {
+    console.log(req.body)
+    burgers.create( req.body , (result) => {
         // Send back the ID of the new quote
-        console.log(result.insertId);
+        // console.log(result.insertId);
         res.json({ id: result.insertId });
     });
 });
