@@ -2,6 +2,7 @@
   <h1>EAT DA BURGER</h1>
 
   <div class="row">
+    <img src="http://images.all-free-download.com/images/graphiclarge/burger_store_facade_design_with_food_on_window_6825108.jpg" class="img-fluid" alt="burger shop" max-width="300" max-height="300">
 
 
     <div class="col">
@@ -9,7 +10,7 @@
       <ul>
         {{#each burgers}}
         {{#unless devoured}}
-        {{> burgers/burger-block eaten=true}}
+        {{> burgers/burger-block eaten=false}}
         {{/unless}}
         {{/each}}
       </ul>
@@ -19,7 +20,7 @@
       <ul>
         {{#each burgers}}
         {{#if devoured}}
-        {{>burgers/burger-block eaten=false}}
+        {{>burgers/burger-block eaten=true}}
         {{/if}}
         {{/each}}
       </ul>
