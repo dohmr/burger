@@ -23,7 +23,7 @@ const orm = {
             // do we need a reload of the page?
         });
     },
-    // UPDATE value of a burger to devoured! by :id
+    // UPDATE value of a burger to devoured true/false by :id
     updateBurger: (table, update, condition, cb) => {
         const queryString = "UPDATE ?? SET ? WHERE ?";
         const values = [table, update, condition];

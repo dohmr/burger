@@ -2,7 +2,9 @@
   <h1>EAT DA BURGER</h1>
 
   <div class="row">
-    <img src="http://images.all-free-download.com/images/graphiclarge/burger_store_facade_design_with_food_on_window_6825108.jpg" class="img-fluid" alt="burger shop" max-width="300" max-height="300">
+    <img
+      src="http://images.all-free-download.com/images/graphiclarge/burger_store_facade_design_with_food_on_window_6825108.jpg"
+      class="img-fluid" alt="burger shop" max-width="300" max-height="300">
 
 
     <div class="col">
@@ -28,8 +30,9 @@
   </div>
 
   <div class="row">
-    <div class="col">
-      <h2>Make a Burger!</h2>
+
+    <div class="col-2">
+      <h2>Grill IT!</h2>
       <form class="create-form">
 
         <div class="form-group" method="POST">
@@ -37,35 +40,17 @@
           <input type="text" id="burg" name="name">
 
         </div>
-    {{!-- </div> --}}
-    {{!-- <div class="col"> --}}
+    </div>
+    <div class="col-2">
       <div class="form-group" method="POST">
         <label for="devoured">Hungry??</label><br>
         <input type="radio" name="devoured" value="1" checked> Devour It!<br>
         <input type="radio" name="devoured" value="0"> Save for Later!
       </div>
-      <button type="submit">FIRE Burger!<i class="fas fa-fire"></i></button>
+      <button type="submit" class="btn btn-danger">FIRE Burger!<i class="fas fa-fire"></i></button>
       </form>
     </div>
   </div>
+
+
 </div>
-
-
-
-{{!-- 
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form> --}}
