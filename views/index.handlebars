@@ -1,26 +1,70 @@
-<h1>EAT DA BURGER</h1>
+<div class="container">
+  <h1>EAT DA BURGER</h1>
 
-<ul>
-  {{#each burgers}}
-    {{!-- {{#unless whole}} --}}
-      {{this.id}}. {{this.burger_name}}<button type="submit">Devoure !</button><br>
-    {{!-- {{/unless}} --}}
-  {{/each}}
-</ul>
+  <div class="row">
 
 
-<h2>Make a Burger!</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <input type="text" id="burg" name="name"><br>
-    <label for="burg">Name a Burger:</label>
-    
+    <div class="col">
+      <h2>Ready To Eat.</h2>
+      <ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-block devoured=true}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col">
+      <h2>Devoured!</h2>
+      <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{>burgers/burger-block devoured=false}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
   </div>
 
-  <div class="form-group">
-    <label for="devoured">Hungry?</label><br>
-  </div>
+  <div class="row">
+    <div class="col">
+      <h2>Make a Burger!</h2>
+      <form class="create-form">
 
-  <button type="submit">Add Dat Thang</button>
-</form>
+        <div class="form-group" method="POST">
+          <label for="burg">Name a Burger:</label><br>
+          <input type="text" id="burg" name="name">
+
+        </div>
+    </div>
+    <div class="col">
+      <div class="form-group" method="POST">
+        <label for="devoured">Hungry??</label><br>
+        <input type="radio" name="devoured" value="1" checked> Devour It!<br>
+        <input type="radio" name="devoured" value="0"> Save for Later!
+      </div>
+      <button type="submit">Prep Burger!</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+{{!-- 
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form> --}}

@@ -7,7 +7,7 @@ $(() => {
         const eatOrNah = { value: newBurgerVal };
 
         // Send the PUT request.
-        $.ajax(`/api/burgers/${id}/devoured`, {
+        $.ajax(`/burger/eat/${id}/devoured`, {
             type: "PUT",
             // Convert object to JSON
             data: JSON.stringify(eatOrNah),
@@ -24,12 +24,13 @@ $(() => {
         event.preventDefault();
 
         const newBurger = {
-            name: $("#burg").val().trim(),
+            burger_name: $("#burg").val().trim(),
             devoured: $("[name=devoured]:checked").val().trim(),
         };
+        console.log(newBurger);
 
         // Send the POST request.
-        $.ajax("/api/burgers", {
+        $.ajax("/burger/eat", {
             type: "POST",
             data: newBurger,
         }).then(() => {

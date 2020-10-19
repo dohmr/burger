@@ -22,8 +22,10 @@ router.get("/", (req, res) => {
 
 // add a new burger and POST it into our DB
 // do we need a reload of the page?
-router.post("/api/burgers", (req, res) => {
-    burgers.create({ burger_name: req.body.name }, (result) => {
+router.post("/burger/eat", (req, res) => {
+  console.log(req.body.name),
+  console.log(req.body.devoured),
+    burgers.create({ burger_name: req.body.burger_name, devoured: req.body.devoured }, (result) => {
         // Send back the ID of the new quote
         console.log(result.insertId);
         res.json({ id: result.insertId });
@@ -33,7 +35,7 @@ router.post("/api/burgers", (req, res) => {
 
 
 // update our burger, PUT its 'status' to devoured by :id
-router.put("/api/burgers/:id/devoured", (req, res) => {
+router.put("/burger/eat/:id/devoured", (req, res) => {
     const condition = { id: req.params.id };
     const update = { devoured: req.body.value };
   
