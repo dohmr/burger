@@ -1,18 +1,17 @@
-// alert("HELLLLO");
 
 $(() => {
-    $("#change-value").on("click", function () {
+    $(".change-value").on("click", function () {
         const id = $(this).data("id");
-        const newBurgerVal = $(this).data("newvalue");
+        const devoured = $(this).data("newvalue");
 
-        const eatOrNah = { value: newBurgerVal };
+        const eatOrNah = { value: devoured };
 
         // Send the PUT request.
         $.ajax(`/burger/eat/${id}/devoured`, {
             type: "PUT",
-            // Convert object to JSON
+            
             data: JSON.stringify(eatOrNah),
-            // Tell the server that this request contains JSON
+            
             contentType: "application/json; charset=UTF-8",
         }).then(() => {
 

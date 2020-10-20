@@ -10,7 +10,7 @@ const burgers = {
     },
 
     create: (newBurger, cb) => {
-        // console.log(cb);
+
         orm.insertOne("burgers", newBurger, (res) => {
             cb(res);
         });
@@ -25,9 +25,6 @@ const burgers = {
 };
 
 
-// selectAll()
-// insertOne()
-// updateOne()
 
 
 module.exports = burgers;

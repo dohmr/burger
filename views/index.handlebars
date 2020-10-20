@@ -6,13 +6,12 @@
       src="http://images.all-free-download.com/images/graphiclarge/burger_store_facade_design_with_food_on_window_6825108.jpg"
       class="img-fluid" alt="burger shop" max-width="300" max-height="300">
 
-
     <div class="col">
       <h2>Ready To Eat.</h2>
       <ul>
         {{#each burgers}}
         {{#unless devoured}}
-        {{> burgers/burger-block eaten=false}}
+        {{> burgers/burger-block devoured=1}}
         {{/unless}}
         {{/each}}
       </ul>
@@ -22,7 +21,7 @@
       <ul>
         {{#each burgers}}
         {{#if devoured}}
-        {{>burgers/burger-block eaten=true}}
+        {{>burgers/burger-block devoured=0}}
         {{/if}}
         {{/each}}
       </ul>
@@ -40,9 +39,6 @@
           <input type="text" id="burg" name="name">
 
         </div>
-
-
-        {{!-- <div class="col-2"> --}}
 
         <div class="form-group">
           <label for="devoured">Hungry??</label><br>
